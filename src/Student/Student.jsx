@@ -5,9 +5,10 @@ const Student = (props) => {
     <div>
       <h1>{props.student.name}</h1>
       <h2>Bio: </h2>
-      <h3>{props.student.bio}</h3>
+      <p>{props.student.bio}</p>
       <h2>Scores:</h2>
       {props.student.scores.map(score => <Scores score={score}/>)}
+      
     </div>
   );
 }

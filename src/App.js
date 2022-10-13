@@ -3,7 +3,7 @@ import Student from './Student/Student';
 import './App.css';
 
 function App() {
-  const [students,setStudents] = useState([
+  const [students, setStudents] = useState([
     {
       name: 'Cait Yomorta',
       bio: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus placeat nostrum explicabo? Voluptatibus expedita saepe officia optio, commodi totam ratione laudantium ipsum porro molestias, quasi nulla minus vitae laboriosam corrupti Delectus inventore explicabo est odit incidunt rem a recusandae eum pariatur. Aperiam doloremque blanditiis harum voluptate animi fugit beatae asperiores quo, dignissimos sed illum veniam eum accusantium nulla quod voluptatum',
@@ -64,11 +64,18 @@ function App() {
     }
   ])
   return (
+
+
     <div className="App">
-      {students.map(student => 
-        <Student student = {student} />
-      )}
+      <div className='icon-container'>
+        {students.map(student =>
+          <div className='class-div'>
+          <Student student={student} />
+          </div>
+        )}
+      </div>
     </div>
+
   );
 }
 
